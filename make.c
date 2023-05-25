@@ -120,6 +120,8 @@ __RCSID("$NetBSD: make.c,v 1.96 2016/11/10 23:41:58 sjg Exp $");
 #include    "dir.h"
 #include    "job.h"
 
+FILE *debug_file;
+
 static unsigned int checked = 1;/* Sequence # to detect recursion */
 static Lst     	toBeMade;	/* The current fringe of the graph. These
 				 * are nodes which await examination by
